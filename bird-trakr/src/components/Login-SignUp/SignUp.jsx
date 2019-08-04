@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+import './SignUp.scss';
+
 const SignUp = () => {
 
     const [user, setUser] = useState({email: "", password: ""})
@@ -13,24 +15,27 @@ const SignUp = () => {
 
   return (
 
-    <div className='container-sign-in'>
-        <h2>Sign-Up</h2>
-        <form>
+    <div className='container-signUp'>
+        <h2>Sign Up</h2>
+        <form className="signUp-form">
             <input
-                name = "email"
-                type = "email"
-                placeholder = "Enter Email"
-                onChange = {handleChange}
-                value = {user.email}
+                name="email"
+                type="email"
+                placeholder="Enter Email"
+                onChange={handleChange}
+                value={user.email}
+                className="signUp-input signUp-form-el"
             />
              <input
-                name = "password"
-                type = "password"
-                placeholder = "Enter Password"
-                onChange = {handleChange}
-                value = {user.password}
+                name="password"
+                type="password"
+                placeholder="Enter Password"
+                onChange={handleChange}
+                value={user.password}
+                className="signUp-input signUp-form-el"
+
             />
-            <button>Sign Up</button>
+            <button className="signUp-btn signUp-form-el">Sign Up</button>
         
         </form>
     </div>
